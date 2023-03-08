@@ -1,0 +1,10 @@
+{
+    "input_on": {
+        "value": 149,
+        "don_vi": "Kbps"
+    },
+    "input_off": {
+        "value": 49,
+        "don_vi": "Kbps"
+    }
+}

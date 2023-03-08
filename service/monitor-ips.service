@@ -1,0 +1,13 @@
+[Unit]
+Description=Monitor DDoS Unlock
+Wants=mysql.service
+After=mysql.service
+Wants=clickhouse-server.service
+After=clickhouse-server.service
+
+[Service]
+ExecStart=/usr/bin/python3 /home/master/bwaf/app/functions/monitors/ddos/config_ips_rule_service.py
+Environment=PYTHONPATH="${PYTHONPATH}:/home/master/bwaf"
+
+[Install]
+WantedBy=multi-user.target

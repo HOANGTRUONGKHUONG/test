@@ -1,0 +1,28 @@
+echo "CONFIG SYSTEM AFTER REBOOT"
+
+# config route
+echo "CONFIG ROUTE"
+route add -net 172.26.1.0 netmask 255.255.255.0 gw 20.20.20.96
+route add -net 10.0.0.0 netmask 255.0.0.0 gw 20.20.20.96
+
+ip route add table rtenp2s0f1 default dev enp2s0f1 via 123.30.245.1
+ip route add table rtenp2s0f1 10.0.0.0/8 dev enp2s0f0 via 20.20.20.96
+ip route add table rtenp2s0f1 172.26.1.0/24 dev enp2s0f0 via 20.20.20.96
+ip route add table rtenp2s0f1 20.20.20.0/24 dev enp2s0f0 src 20.20.20.26
+ip route add table rtenp2s0f1 123.30.245.1 dev enp2s0f1 src 123.30.245.55
+ip rule add from 123.30.245.55 table rtenp2s0f1
+
+ip route add table rtenp2s0f3 default dev enp2s0f3 via 123.31.21.1
+ip route add table rtenp2s0f3 10.0.0.0/8 dev enp2s0f0 via 20.20.20.96
+ip route add table rtenp2s0f3 172.26.1.0/24 dev enp2s0f0 via 20.20.20.96
+ip route add table rtenp2s0f3 20.20.20.0/24 dev enp2s0f0 src 20.20.20.26
+ip route add table rtenp2s0f3 123.31.21.1 dev enp2s0f3 src 123.31.21.47
+ip rule add from 123.31.21.47 table rtenp2s0f3
+ip rule add from 123.31.21.48 table rtenp2s0f3
+ip rule add from 123.31.21.49 table rtenp2s0f3
+ip rule add from 123.31.21.50 table rtenp2s0f3
+# config iptables out of db rule
+echo "CONFIG IPTABLES"
+iptables -I INPUT -s 27.72.28.152/32 -j ACCEPT
+iptables -I INPUT -s 118.70.80.143/32 -j ACCEPT
+iptables -I INPUT -s 14.232.214.213/32 -j ACCEPT

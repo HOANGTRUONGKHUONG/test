@@ -1,0 +1,11 @@
+[Unit]
+Description=Running Scan
+Wants=mysql.service
+After=mysql.service
+
+[Service]
+ExecStart=/usr/bin/python3 /home/master/bwaf/app/functions/web_scans_vulnerabilities/web_scans_vulnerabilities_service.py
+Environment=PYTHONPATH="${PYTHONPATH}:/home/master/bwaf"
+
+[Install]
+WantedBy=multi-user.target

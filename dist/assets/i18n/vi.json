@@ -1,0 +1,825 @@
+{
+  "common": {
+    "period": "Chu Kỳ",
+    "start": "Bắt đầu",
+    "Settings": "Cấu hình",
+    "Language": "English",
+    "alert": "Cảnh báo",
+    "created_at": "Ngày tạo",
+    "profile": "Thông tin cá nhân",
+    "update": "Cập nhật",
+    "cancel": "Hủy",
+    "add": "Thêm mới",
+    "save": "Lưu",
+    "edit": "Sửa",
+    "close": "Đóng",
+    "delete": "Xóa",
+    "action": "Thao tác",
+    "show": "Hiển thị",
+    "theRules": "Các quy tắc",
+    "search": "Tìm kiếm",
+    "entries": "mục",
+    "pagingInfo": "Hiện thị từ {{start}} tới {{end}} của {{total}} bản ghi",
+    "confirm": "Đồng ý",
+    "refresh": "Làm mới",
+    "minute": "{{value}} phút",
+    "hour": "{{value}} giờ",
+    "day": "{{value}} ngày",
+    "month": "{{value}} tháng",
+    "scan_now": "Quét",
+    "download": "Tải Xuống",
+    "typeValue": "{{value}}",
+    "restore": "Khôi phục dữ liệu",
+    "upload_file": "Tải lên",
+    "upload": "Tải lên",
+    "filter": "Bộ lọc",
+    "no_record": "Không có bản ghi",
+    "two_factor_authentication": "Xác thực 2 yếu tố",
+    "QRtext": "Sử dụng Google authentication để lấy mã bảo mật OTP",
+    "getQR": "nhận mã QR",
+    "status": "Trạng thái"
+  },
+  "error": {
+    "validate": {
+      "input_required": "Trường này bắt buộc nhập",
+      "input_valid": "Email không hợp lệ",
+      "email": {
+        "required": "Bạn phải nhập email.",
+        "invalid": "Email bạn nhập không hợp lệ.",
+        "minlength": "Email phải có ít nhất 8 ký tự.",
+        "maxlength": "Email không được vượt quá 20 ký tự.",
+        "pattern": "Email không đúng định dạng",
+        "valid": "Email không hợp lệ"
+      },
+      "password": {
+        "required": "Bạn phải nhập mật khẩu.",
+        "minlength": "Mật khẩu phải có ít nhất 8 ký tự.",
+        "maxlength": "Mật khẩu không được vượt quá 20 ký tự.",
+        "pattern": "Mật khẩu phải chứa 4 kiểu ký tự (a-z, A-Z, 0-9, !@#$%^&*)."
+      },
+      "pattern": "Tên không được chứa dấu và kí tự đặc biệt.",
+      "pattern1": "Số điện thoại nhập sai định dạng.",
+      "phone_number": {
+        "invalid": "Số điện thoại không hợp lệ"
+      },
+      "name": {
+        "invalid": "Họ và tên không hợp lệ",
+        "maxlength": "Họ và tên không vượt quá 30 kí tự",
+        "minlength": "Nội dung không ít hơn 8 ký tự",
+        "maxlengthS": "Nội dung không vượt quá 20 ký tự"
+      },
+      "domain": {
+        "invalid": "Domain không hợp lệ"
+      },
+      "ip": {
+        "invalid": "IP không hợp lệ"
+      },
+      "port": {
+        "invalid": "Port không hợp lệ"
+      },
+      "user_name": {
+        "invalid": "Tên hiển thị không hợp lệ",
+        "pattern": "Tên hiển thị chỉ được chứa chữ cái, chữ số, '_' và '.'"
+      },
+      "date_of_birth": {
+        "required": "Bạn phải nhập ngày sinh",
+        "pattern": "Ngày sinh phải là định dạng dd/mm/yyyy"
+      },
+      "minlength": "Trường này yêu cầu phải có ít nhất 8 ký tự.",
+      "maxlength": "Trường này yêu cầu không quá 100 ký tự",
+      "ipPattern": "Địa chỉ IP không hợp lệ",
+      "netmask": "Địa chỉ metmask không hợp lệ",
+      "token_time": {
+        "invalid": "Hãy nhập một thời gian hợp lệ (lớn hơn 0)"
+      },
+      "ip_connection": {
+        "invalid": "Hãy nhập một số hợp lệ"
+      }
+    }
+  },
+  "login": {
+    "Login": "Đăng nhập",
+    "error": {
+      "client": "Lỗi xác thực"
+    }
+  },
+  "logout": {
+    "Logout": "Đăng xuất"
+  },
+  "profile": {
+    "user_name": "Tên",
+    "name": "Họ và tên",
+    "gender": "Giới tính",
+    "phone_number": "Số điện thoại",
+    "email": "Địa chỉ email",
+    "date_of_birth": "Ngày sinh",
+    "change_password": "Đổi mật khẩu",
+    "password": "Mật khẩu hiện tại",
+    "new_password": "Mật khẩu mới",
+    "confirm_new_password": "Nhập lại mật khẩu mới",
+    "refresh": "Làm Mới",
+    "can_edit": "Quyền chỉnh sửa",
+    "security_code": "Mã bảo mật",
+    "access_token_time": "Thời gian access token",
+    "refresh_token_time": "Thời gian refresh token",
+    "seconds": "giây",
+    "hours": "giờ",
+    "limit_connection": "Giới hạn kết nối",
+    "ip_connection": "Kết nối IP",
+    "connection_session": "Cài đặt phiên kết nối"
+  },
+  "object": {
+    "rule": {
+      "title": "Quản lý quy tắc",
+      "title_available": "Quy tắc có sẵn",
+      "ruleName": "Tên quy tắc",
+      "detail": "Chi tiết",
+      "id_rule": "Quy tắc ID",
+      "description": "Mô tả",
+      "message": "Thông điệp",
+      "tag": "Gán",
+      "action": "Tháo tác",
+      "rules": "Quy tắc"
+    },
+    "ruleOther": {
+      "title_others": "qui định khác",
+      "name": "Tên",
+      "detail": "Chi tiết",
+      "description": "Mô Tả",
+      "upDown": "Đẩy/Tải",
+      "site": "Địa điểm",
+      "delete_popup": {
+        "title": "Cảnh báo",
+        "message": "Bạn muốn xóa qui định: {{name}}",
+        "messageNew": "Bạn có muốn xóa : {{name}}"
+      }
+    },
+    "website": {
+      "add_ip_port": "Thêm IP port",
+      "add_listen_port": "Thêm Listen Port",
+      "delete_popup": {
+        "title": "Cảnh báo",
+        "message": "Bạn muốn xóa wesite: {{name}}"
+      }
+    },
+    "ssl": {
+      "title": "SSL",
+      "view_cert": "Xem Chứng chỉ",
+      "name": "Tên",
+      "description": "Mô tả",
+      "key_cert": "khóa  & chứng chỉ",
+      "ssl_key": "khóa SSL",
+      "ssl_cert": "chứng chỉ SSL",
+      "delete_popup": {
+        "title": "Cảnh báo",
+        "message": "Bạn có chắc chắn xóa chứng chỉ SSL: {{name}}"
+      }
+    },
+    "groupWebsite": {
+      "title": "Nhóm website",
+      "view": "Xem chi tiết tên miền",
+      "name": "Tên",
+      "description": "Mô tả",
+      "website": {
+        "domain_name": "Tên miền"
+      },
+      "delete_popup": {
+        "title": "Cảnh báo",
+        "message": "Bạn có chắc chắc xóa website: {{name}}"
+      },
+      "save_popup": {
+        "title": "Cảnh báo",
+        "message": "Bạn có chắc chắc lưu website?"
+      }
+    },
+    "account": {
+      "title": "Tài khoản",
+      "name": "Tên",
+      "email": "Email",
+      "phone": "Số điện thoại",
+      "delete_popup": {
+        "title": "Cảnh báo",
+        "message": "Bạn có chắc chắn xóa tài khoản: {{name}}"
+      },
+      "save_popup": {
+        "title": "Cảnh báo",
+        "message": "Bạn có chắc chắc lưu tài khoản: {{name}}",
+        "message1": "Bạn có chắc chắc lưu tài khoản vừa tạo"
+      }
+    },
+    "mail_sender": {
+      "title": "Hòm thư gửi",
+      "email": "Email",
+      "password": "Mật khẩu",
+      "mail_server": "Mail server",
+      "select_mail_server": "Chọn mail server",
+      "save_popup": {
+        "title": "Cảnh báo",
+        "message": "Bạn có chắc muốn lưu Email: {{email}}"
+      },
+      "delete_popup": {
+        "title": "Cảnh báo",
+        "message": "Bạn có chắc muốn xóa Email: {{email}}"
+      }
+    }
+  },
+  "monitor": {
+    "traffic": "Luồng dữ liệu",
+    "status_code": "Thống kê code trạng thái",
+    "connection": "Thống kê lượng kết nối",
+    "waf": {
+      "world_map_top_10": "Top 10 nước tấn công",
+      "world_chart_top_10_country": "Top 10 nước tấn công",
+      "ip_chart_top_10": "Top 10 IP tấn công",
+      "attack_website_chart_top_10": "Top 10 website bị tấn công",
+      "attack_action_chart_top_10": "Top 10 luật vi phạm",
+      "website_application_log": "Nhật ký bảo vệ website"
+    },
+    "setting": {
+      "title": "Lịch sử hệ thống",
+      "id": "No .",
+      "datetime": "Ngày giờ",
+      "user": "Người dùng",
+      "ip": "Địa chỉ ip",
+      "action": "Tháo tác",
+      "message": "Lời nhắn",
+      "result": "Kết quả"
+    },
+    "ddos": {
+      "world_map_top_10": "Top 10 nước tấn công",
+      "website_chart_top_10": "Top 10 website bị tấn công",
+      "network_layer_log": "Nhật ký tầng mạng",
+      "application_log": "Nhật ký tầng ứng dụng",
+      "ordinal_numbers": "STT",
+      "ip_addr": "Địa chỉ ip",
+      "blocked_time": "Thơi gian chặn",
+      "country": "Quốc gia",
+      "rule": "Quy định",
+      "unlock": "Mở khóa",
+      "period": "Giai đoạn",
+      "type": "Kiểu",
+      "website_domain": "Tên miền website",
+      "detail": "Chi tiết",
+      "duplicate_uri": "Trùng uri"
+    },
+    "file": {
+      "fileName": "Tên tệp",
+      "SourceIP": "IP nguồn",
+      "GroupWebsite": "Trang web nhóm",
+      "Website": "Website",
+      "URL": "URL",
+      "Datetime": "Ngày giờ",
+      "Detectstatus": "Phát hiện trạng thái",
+      "file_scanned": "File Scanned"
+    }
+  },
+  "about": {
+    "update": "Cập nhật",
+    "serial": "Số giấy phép",
+    "cpu_info": "Thông tin CPU",
+    "ram_info": "Thông tin RAM",
+    "version_info": "Thông tin phiên bản",
+    "licence_info": "Thông tin giấy phép",
+    "licence": "Giấy phép",
+    "check_for_update": "Kiểm tra cập nhật",
+    "manual": "Hướng dẫn sử dụng",
+    "current_version": "Phiên bản hiện tại",
+    "lastest_version": "Phiên bản mới nhất",
+    "download_lastest_version": "Tải phiên bản mới nhất",
+    "install_update": "Cài đặt cập nhật",
+    "ha_status": "Trạng thái HA",
+    "system_uptime": "Thời gian hoạt động hệ thống",
+    "update_popup": {
+      "title": "Cảnh báo",
+      "message": "Bạn có chắc muốn cập nhật phần mềm phiên bản : {{name}}"
+    }
+  },
+  "network": {
+    "title": "Giao diện mạng",
+    "name": "Tên",
+    "type": "Loại kết nối",
+    "ip_address": "Địa chỉ ip",
+    "gateway": "Cổng mạng",
+    "dns": "DNS",
+    "service": "Cổng dịch vụ",
+    "status": "Trạng thái",
+    "delete_popup": {
+      "title": "Cảnh báo",
+      "message": "Bạn có chắc chắn xóa SSL: {{name}}"
+    },
+    "edit_popup": {
+      "title": "Cập nhật network interface {{name}}"
+    },
+    "service_access": {
+      "service_port": "Cổng",
+      "protocol": "Giao thức",
+      "status": "Trạng thái",
+      "port_from": "Cổng đầu",
+      "port_to": "Cổng cuối"
+    }
+  },
+  "get": {
+    "log-storage": {
+      "fail": {
+        "client": "Yêu cầu quyền admin để truy cập",
+        "server": "Lấy thông tin cấu hình logs lỗi"
+      }
+    }
+  },
+  "post": {
+    "website": {
+      "success": "Tạo mới website thành công",
+      "to.group.website.success": "Cập nhật website vào nhóm website thành công",
+      "wait": {
+        "health_check": "Vui lòng chờ trong giây lát hệ thống đang kiểm tra sức khỏe"
+      }
+    },
+    "ssl": {
+      "success": "Tạo mới SSL thành công"
+    },
+    "scan": {
+      "success": "Tạo mới Scan thành công"
+    },
+    "report": {
+      "success": "Tạo mới báo cáo thành công"
+    },
+    "network": {
+      "success": "Tạo mới giao diện mạng thành công"
+    },
+    "group": {
+      "website": {
+        "success": "Thành công"
+      }
+    },
+    "restore": {
+      "success": "Khôi phục thành công",
+      "default": {
+        "setting": {
+          "success": "Khôi phục cài đặt mặc định thành công"
+        }
+      }
+    },
+    "schedule": {
+      "backup": {
+        "success": "Lập lịch sao lưu thành công"
+      },
+      "scan.success": "Tạo lịch quét thành công"
+    },
+    "backup.file.success": "Tạo tệp sao lưu thành công",
+    "account": {
+      "success": "Tạo mới tài khoản thành công"
+    },
+    "user": {
+      "success": "Tạo mới người dùng thành công"
+    },
+    "ip": {
+      "to": {
+        "black_list": {
+          "success": "Thêm mới địa chỉ ip nguy hiểm thành công",
+          "fail": {
+            "client": "Thêm mới địa chỉ ip nguy hiểm thất bại"
+          }
+        },
+        "white_list": {
+          "success": "Thêm mới địa chị ip an toàn thành công",
+          "fail": {
+            "client": "Thêm mới địa chị ip an toàn thất bại"
+          }
+        }
+      }
+    }
+  },
+  "put": {
+    "website": {
+      "success": "Cập nhật website thành công",
+      "fail": {
+        "client": "Cập nhật website lỗi"
+      },
+      "wait": {
+        "health_check": "Vui lòng chờ trong giây lát hệ thống đang kiểm tra sức khỏe"
+      }
+    },
+    "network": {
+      "success": "Cập nhật giao diện mạng thành công"
+    },
+    "ssl": {
+      "success": "Cập nhật SSL thành công"
+    },
+    "group.website": {
+      "success": "Cập nhật nhóm website thành công"
+    },
+    "account": {
+      "success": "Cập nhật tài khoản thành công"
+    },
+    "user": {
+      "success": "Cập nhật thông tin người dùng thành công"
+    },
+    "report": {
+      "success": "Cập nhật báo cáo thành công"
+    },
+    "ip": {
+      "to": {
+        "black_list": {
+          "success": "Cập nhật ip nguy hiểm thành công",
+          "fail": {
+            "client": "Cập nhật ip nguy hiểm thất bại"
+          }
+        },
+        "white_list": {
+          "success": "Cập nhật ip an toàn thành công",
+          "fail": {
+            "client": "Cập nhật ip an toàn thất bại"
+          }
+        }
+      }
+    },
+    "high": {
+      "availability": {
+        "success": "Cập nhật cấu hình HA thành công"
+      }
+    },
+    "schedule": {
+      "success": "Cập nhật lịch quét thành công"
+    },
+    "log-storage": {
+      "success": "Chỉnh sửa cấu hình lưu trữ nhật ký thành công",
+      "fail" : {
+        "server": "Server lỗi",
+        "client": "Cập nhật cấu hình lưu trữ nhật ký thất bại"
+      }
+    }
+  },
+  "delete": {
+    "session": {
+      "success": "Xóa phiên đăng nhập thành công",
+      "fail": {
+        "server": "Xóa phiên đăng nhập không thành công",
+        "client": ""
+      }
+    },
+    "website": {
+      "success": "Xóa website thành công"
+    },
+    "ssl": {
+      "success": "xóa SSL thành công"
+    },
+    "group.website": {
+      "success": "Xóa nhóm website thành công"
+    },
+    "account": {
+      "success": "Xóa tài khoản thành công"
+    },
+    "user": {
+      "success": "Xóa Người dùng thành công"
+    },
+    "report": {
+      "success": "Xóa báo cáo thành công"
+    },
+    "ip": {
+      "from": {
+        "black_list": {
+          "success": "Xóa IP nguy hiểm thành công",
+          "fail": {
+            "client": "Xóa IP nguy hiểm thất bại"
+          }
+        },
+        "white_list": {
+          "success": "Xóa IP an toàn thành công",
+          "fail": {
+            "client": "Xóa IP an toàn thất bại"
+          }
+        }
+      }
+    },
+    "high": {
+      "availability": {
+        "success": "Xóa cấu hình HA thành công"
+      }
+    },
+    "schedule": {
+      "success": "Xóa lịch quét thành công"
+    }
+  },
+  "user": {
+    "title": "Quản trị viên",
+    "delete_popup": {
+      "title": "Cảnh báo",
+      "message": "Bạn chắc chắn xóa người dùng này: {{name}}"
+    },
+    "save_popup": {
+      "title": "Cảnh báo",
+      "message": "Bạn chắc chắn muốn lưu lại người dùng này: {{name}}"
+    }
+  },
+  "session": {
+    "title": "Quản lý phiên",
+    "login_time": "Thời gian đăng nhập",
+    "account": "Tài khoản",
+    "ip_address": "Địa chỉ IP",
+    "delete_popup": {
+      "title": "Bạn chắc chắn muốn hủy phiên đăng nhập của người dùng này: {{account}}"
+    }
+  },
+  "ip": {
+    "whitelist": "Dải mạng cho phép",
+    "blacklist": "Dải mạng bị chặn",
+    "no": "STT",
+    "ip": "Địa chỉ IP",
+    "netmask": "Mặt nạ mạng",
+    "description": "Mô tả",
+    "action": "Thao tác",
+    "ip_placeholder": "Nhập địa chỉ IP",
+    "netmask_placeholder": "Nhập subetmask",
+    "description_placeholder": "Nhập mô tả",
+    "delete_popup": {
+      "title": "Cảnh báo",
+      "message": "Bạn có chắc chắn xóa IP: {{name}}"
+    },
+    "save_popup": {
+      "title": "Cảnh báo",
+      "message": "Bạn có chắc chắn lưu địa chỉ IP: {{name}}"
+    }
+  },
+  "resource": {
+    "title": "Tài nguyên hệ thống",
+    "enter_date_range": "Nhập khoảng ngày"
+  },
+  "ddos": {
+    "network": {
+      "title": "DDoS tầng mạng",
+      "name": "Tên",
+      "threshold": "Ngưỡng truy cập",
+      "duration": "Thời lượng",
+      "block_duration": "Thời lượng chặn",
+      "alert": "Cảnh báo",
+      "state": "Trạng thái",
+      "save_popup": {
+        "title": "Cảnh báo",
+        "message": "Bạn có chắc chắn lưu : {{name}}"
+      }
+    },
+    "application": {
+      "title": "DDoS tầng ứng dụng",
+      "group_website": "Group website",
+      "name": "Tên",
+      "count": "Số lần truy cập",
+      "time": "Thời gian",
+      "blockTime": "Thời gian chặn",
+      "website": "Website",
+      "url": "Url",
+      "status": "Trạng thái",
+      "active": "Kích hoạt",
+      "rule_type": "Kiểu luật",
+      "action": "Hành động",
+      "delete_popup": {
+        "title": "Cảnh báo",
+        "message": "Bạn muốn xóa cấu hình phòng chống ddos tầng ứng dụng {{name}}"
+      }
+    }
+  },
+  "webVulnerabilityScan": {
+    "scanSchedule": {
+      "webVulnerabilityScan": {
+        "scanHistory": "Lịch sử quét"
+      },
+      "tilte": "Lập lịch quét",
+      "id": "STT",
+      "website": "Website",
+      "period": "Chu kỳ",
+      "start_in": "Bắt đầu vào",
+      "account": "Tài khoản",
+      "mail_sender": "Người gửi",
+      "action": "Thao tác",
+      "delete_popup": {
+        "title": "Cảnh báo",
+        "message": "Bạn có chắc chắn xóa lịch rà quét"
+      }
+    },
+    "scanHistory": {
+      "title": "Lịch sử quét",
+      "id": "No .",
+      "datetime": "Thời gian",
+      "website": "Website",
+      "ip_address": "Địa chỉ IP",
+      "status": "Trạng thái",
+      "result": "Kết quả"
+    }
+  },
+  "web_vulnerability_scan": {
+    "title": "Quét lỗ hổng",
+    "scan_id": "STT",
+    "website_name": "Tên Website",
+    "ip": "Địa chỉ ip",
+    "system_detail": "Thông tin hệ thống",
+    "datetime": "Thời gian",
+    "status": "Trạng thái",
+    "progress": "Tiến độ",
+    "scan": "Kết Quả",
+    "view_scan": "Xem kết quả",
+    "group_websites": "Nhóm Websites",
+    "scan_with": "Công cụ sử dụng",
+    "select_file": "Chọn tệp",
+    "save_log": "Lưu Log",
+    "log_file_popup": {
+      "title": "Chọn file log có sẵn"
+    },
+    "delete_popup": {
+      "title": "Cảnh báo",
+      "message": "Bạn chắc chắn muốn xóa bản ghi : {{name}}"
+    }
+  },
+  "report": {
+    "title": "Báo cáo",
+    "name": "Tên Báo Cáo",
+    "period": "Chu kỳ",
+    "account": "Tài khoản nhận",
+    "mail_sender": "Hòm thư gửi",
+    "state": "Trạng Thái",
+    "report_form": "Mãu báo cáo",
+    "delete_popup": {
+      "title": "Cảnh báo",
+      "message": "Bạn muốn xóa báo cáo: {{name}}"
+    },
+    "add": {
+      "report_form": "Thêm mới mẫu báo cáo"
+    }
+  },
+  "high_availability": {
+    "priority": "Độ ưu tiên",
+    "configuration": "Cấu hình HA",
+    "heartbeat_configuration": "Cấu hình đồng bộ HA",
+    "high_availability_status": "Trạng thái HA",
+    "mode": "Chế độ",
+    "device_priority": "Thiết bị ưu tiên",
+    "group_name": "Tên nhóm",
+    "group_password": "Mật khẩu",
+    "heartbeat_interface": "Giao diện đồng bộ",
+    "heartbeat_network": "Mạng đồng bộ",
+    "enable": "Trạng thái",
+    "virtual_ip": "IP ảo",
+    "delete_popup": {
+      "title": "Cảnh báo",
+      "message": "Bạn có chắc chắn xóa HA này"
+    },
+    "max": "độ ưu tiên tối đa 250",
+    "max_group_name": "Tên nhóm không được dài hơn 20 ký tự",
+    "max_group_password": "Password không được dài hơn 20 ký tự"
+  },
+  "backup_restore": {
+    "title": "Sao lưu & Khôi phục",
+    "backup": "Sao lưu",
+    "restore": "Khôi phục",
+    "file_name": "Tên file",
+    "schedule": "Lập lịch",
+    "period": "Chu kỳ",
+    "start": "Ngày bắt đầu",
+    "save_backup": "Sao lưu",
+    "restore_default_setting": "Khôi phục cài đặt gốc",
+    "files": "Danh sách file",
+    "choose_file": "Chọn file",
+    "file_size": "Độ lón file",
+    "user_password": "Mật khẩu yêu cầu",
+    "backup_day": "Ngày sao lưu",
+    "account_backup": "Người dùng Sao luu",
+    "backup_type": "Loại sao lưu",
+    "detail_restore_file": "Chi tiết file khôi phục",
+    "mode": "Chế độ",
+    "restore_now": "Khôi phục ngay"
+  },
+  "waf": {
+    "group_website": "Nhóm website",
+    "description": "Mô Tả",
+    "website_protection": "Bảo vệ website",
+    "website": "Website",
+    "Exception": "Ngoại lệ",
+    "idRule": "Quy tắc ID",
+    "message": "Lời nhắn",
+    "tag": "Tag",
+    "status": "Trạng thái",
+    "alert": {
+      "type": "Loại",
+      "barrier": "Ngưỡng tấn công",
+      "time": "Khoảng thời gian",
+      "sender": "Người gửi",
+      "state": "Trạng thái",
+      "account": "Tài khoản"
+    },
+
+    "save_popup": {
+      "title": "Bạn có chắc chắn lưu cảnh báo"
+    }
+  },
+  "traceroute": {
+    "pattern": "TLL có giá trị tối đa là 30",
+    "success": "Truy vết thành công"
+  },
+  "portcheck": {
+    "success": "Kiểm tra port thành công",
+    "max": "Port có giá trị tối đa là 65535 "
+  },
+  "ping": {
+    "success": "kiểm port thành công ",
+    "timeout": "Ping có độ trễ lớn nhất là 200",
+    "packet_size": "Dữ liệu ping có độ lớn tối đa 1472",
+    "count": "Bộ đếm có giá trị lớn nhất là 50"
+  },
+  "dashboard": {
+    "ddos_attack": "Tấn công DDOS",
+    "web_app_attack": "Tấn công ứng dụng website",
+    "ddos_waf": "DDOS & WAF",
+    "throughput": "Thông lượng",
+    "system_resource": "Tại nguyên hệ thống",
+    "status_code": "Mã Trạng thái",
+    "system_information": "Thông tin hệ thống"
+  },
+  "system_time": {
+    "get_gmt": "Lấy mốc thời gian",
+    "title": "Thời gian hệ thống",
+    "timezone": "Khu vực",
+    "datetime": "Ngày tháng",
+    "ntp_server": "NTP server"
+  },
+  "diagnostic": {
+    "title": "Chuân đoán mạng",
+    "timeout": "Thời gian hết hạn",
+    "packet_size": "Dung lượng gói tin",
+    "ip_domain": "Tên miền/Địa chỉ IP",
+    "ping": {
+      "title": "Ping",
+      "result": "Kết quả",
+      "count": "Số gói tin"
+    },
+    "traceroute": {
+      "title": "Phân tích đường đi gói tin",
+      "result": "Kết qủa phân tích",
+      "max_ttl": "Thời gian sống tối đa"
+    },
+    "port_check": {
+      "title": "Kiểm tra cổng",
+      "result": "Kết qủa kiểm tra",
+      "port_number": "Thông tin cổng"
+    }
+  },
+  "websites": {
+    "ip": "Địa chỉ IP",
+    "port": "Cổng",
+    "type": "Loại IP",
+    "main_port": "Cổng chính",
+    "redirect_port": "Cổng chuyển",
+    "title": "Websites",
+    "domain": "Tên miền",
+    "ip_port": "IP:Port",
+    "service": "Dịch vụ",
+    "cache": "Cache",
+    "listened_port": "Cổng sử dụng",
+    "listened": "Cổng sử dụng",
+    "ssl": "SSL",
+    "detail": "Chi tiết",
+    "protocol": "Giao thức",
+    "service_config": "Cấu hình dịch vụ",
+    "listened_config": "Cấu hình đã nghe",
+    "info_health_check": "Thông tin health check",
+    "health_check": {
+      "title_header": "Health Check",
+      "info_health_check": "Thông tin health check",
+      "size": "Kích thước",
+      "url": "Url",
+      "port_check": "kiểm tra cổng",
+      "interval": "Khoảng thời gian",
+      "timeout": "Hết giờ",
+      "fall": "Fall",
+      "rise": "Rise",
+      "valid_statuses": "Trạng thái hợp lệ",
+      "concurrency": "Số lượng request đồng thời",
+      "required": {
+        "size": "Hãy cung cấp size",
+        "url": "Hãy cung cấp url",
+        "interval": "Hãy cung cấp interval",
+        "timeout": "Hãy cung cấp timeout",
+        "fall": "Hãy cung cấp fall",
+        "rise": "Hãy cung cấp rise",
+        "valid_statuses": "Hãy cung cấp validate status",
+        "concurrency": "Hãy cung cấp concurrency"
+      },
+      "invalid" : {
+        "url" : "Giá trị nhập vào không đúng định dạng",
+        "number" : "Giá trị nhập vào phải là số nguyên dương và lớn hơn 1",
+        "validate_status": "Các giá trị nhập vào phải là số nguyên dương và nằm trong khoảng từ 100-600",
+        "port_check": "Các giá trị nhập vào phải là số nguyên dương và nằm trong khoảng từ 1- 65535"
+      }
+    }
+  },
+  "logs_setting": {
+    "title": "Thiết lập nhật ký",
+    "system_logs": "Nhật ký hệ thống",
+    "waf_logs": "Nhật ký WAF",
+    "storage_time": "Thời gian lưu trữ",
+    "create_new_file": "Tạo tệp mới khi tệp hiện tại lớn hơn",
+    "m_bytes": "Mbytes",
+    "errors": {
+      "requireTime": "Vui lòng cung cấp thời gian",
+      "requiredFileSize": "Vui lòng cung cấp tệp kích thước",
+      "invalidFileSize": "Giá trị nhập vào phải là số nguyên và lớn hơn 1"
+    }
+  }
+}

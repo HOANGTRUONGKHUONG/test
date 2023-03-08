@@ -1,0 +1,11 @@
+[Unit]
+Description=System Init Setting
+Wants=mysql.service
+After=mysql.service
+
+[Service]
+ExecStart=/usr/bin/python3 /home/master/bwaf/app/functions/power_init/reboot_init_setting.py
+Environment=PYTHONPATH="${PYTHONPATH}:/home/master/bwaf"
+
+[Install]
+WantedBy=multi-user.target

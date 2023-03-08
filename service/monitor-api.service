@@ -1,0 +1,11 @@
+[Unit]
+Description=System API
+Wants=mysql.service
+After=mysql.service
+
+[Service]
+ExecStart=/usr/bin/python3 /home/master/bwaf/app/run.py
+Environment=PYTHONPATH="${PYTHONPATH}:/home/master/bwaf"
+
+[Install]
+WantedBy=multi-user.target
